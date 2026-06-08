@@ -64,3 +64,36 @@ void drawLine(int x1, int y1, int x2, int y2) {
         }
     }
 }
+void drawRectangle(int x1, int y1, int x2, int y2) {
+    drawLine(x1, y1, x2, y1);
+    drawLine(x2, y1, x2, y2);
+    drawLine(x2, y2, x1, y2);
+    drawLine(x1, y2, x1, y1);
+}
+void drawCircle(int cx, int cy, int radius) {
+    int x = 0;
+    int y = radius;
+    int d = 3 - 2 * radius;
+
+    while(y >= x) {
+        setPixel(cx + x, cy + y);
+        setPixel(cx - x, cy + y);
+        setPixel(cx + x, cy - y);
+        setPixel(cx - x, cy - y);
+
+        setPixel(cx + y, cy + x);
+        setPixel(cx - y, cy + x);
+        setPixel(cx + y, cy - x);
+        setPixel(cx - y, cy - x);
+
+        x++;
+
+        if(d > 0) {
+            y--;
+            d += 4 * (x - y) + 10;
+        }
+        else {
+            d += 4 * x + 6;
+        }
+    }
+}
