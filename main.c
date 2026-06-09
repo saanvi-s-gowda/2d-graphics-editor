@@ -97,3 +97,19 @@ void drawCircle(int cx, int cy, int radius) {
         }
     }
 }
+Part 4
+void drawTriangle(int x1, int y1, int x2, int y2, int x3, int y3) {
+    drawLine(x1, y1, x2, y2);
+    drawLine(x2, y2, x3, y3);
+    drawLine(x3, y3, x1, y1);
+}
+int main() {
+    int choice;
+
+    clearPicture();
+
+    printf("2D Graphics Editor\n");
+    printf("Canvas size: %d x %d\n", WIDTH, HEIGHT);
+    printf("Use coordinates x y.\n");
+    printf("x range: 0 to %d\n", WIDTH - 1);
+    printf("y range: 0 to %d\n", HEIGHT - 1);
