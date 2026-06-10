@@ -104,9 +104,9 @@ void drawTriangle(int x1,int y1,int x2,int y2,int x3,int y3){
 }
 int main(){
     int choice;
-clear picture();
+clearPicture();
 print("2D Graphics Editor\n");
-printf("Canvas size:%dx%d\n";WIDTH,HEIGHT);
+printf("Canvas size:%dx%d\n",WIDTH,HEIGHT);
 printf("Use coordinates xy.\n");
 printf("x range:0 to %d\n",WIDTH-1);
 printf("y range:0 to %d\n",HEIGHT-1);
